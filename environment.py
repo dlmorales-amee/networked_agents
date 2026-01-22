@@ -288,7 +288,7 @@ if __name__ == '__main__':
     print(env.get_rewards(actions))
     env.next_step(actions)
     print(f'next_state {env.state}')
-    phi, varphi = env.get_features(actions)
+    phi, varphi = env.get_features(state, actions)
     print(f'Graph-{env.n_step}:')
     print(f'{env.adjacency}')
     # [n_states, n_actions, n_phi]
